@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kerala-rain"
+version = "1.0.0"
+description = "Précipitations et mousson au Kerala (1901-2018) : tendances, variabilité et inondations d'août 2018"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Ilan Aliouchouche" },
+    { name = "Marwan Khairallah" },
+    { name = "Youssef Mir" },
+]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "pymannkendall>=1.4.3",
+    "shapely>=2.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+src = ["src", "scripts", "tests"]
+
+[tool.ruff.isort]
+known-first-party = ["kerala_rain"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

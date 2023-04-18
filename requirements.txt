@@ -1,0 +1,10 @@
+# Environnement d'exécution du notebook et des scripts (versions testées)
+numpy==1.24.2
+pandas==2.0.0
+scipy==1.10.1
+matplotlib==3.7.1
+pymannkendall==1.4.3
+shapely==2.0.1
+jupyter==1.0.0
+ipykernel==6.22.0
+nbconvert==7.3.1
