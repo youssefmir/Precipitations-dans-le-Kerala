@@ -164,7 +164,7 @@ def _floods_block() -> dict:
                 "name": name,
                 "actual": row.rain_actual_mm,
                 "normal": row.rain_normal_mm,
-                "departure": round(float(row.departure_pct), 1),
+                "departure": round(float(row.departure_pct), 2),
                 "fatalities": int(row.fatalities),
                 "landslides": int(row.landslides),
                 "camps": int(row.relief_camps),
