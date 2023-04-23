@@ -19,7 +19,7 @@ from matplotlib.colors import LinearSegmentedColormap, Normalize
 from matplotlib.patches import Polygon as MplPolygon
 from shapely.geometry import MultiPolygon
 
-from .data import MONTHS, MONTHS_FR
+from .data import MONTHS, MONTHS_FR, PROJECT_ROOT
 from .geo import district_shapes
 
 INK = "#0e1f1b"
@@ -62,6 +62,7 @@ DIVERGING_RAMP = (
 )
 
 SOURCE_IMD = "Source : India Meteorological Department (data.gov.in)"
+FIGURES_DIR = PROJECT_ROOT / "assets" / "figures"
 
 
 FONT_PREFERENCES = ("Instrument Sans", "Inter", "DejaVu Sans")
@@ -108,6 +109,12 @@ def use_style() -> None:
             "lines.solid_capstyle": "round",
         }
     )
+
+
+def save(fig: plt.Figure, name: str) -> None:
+    """Enregistre une figure en PNG dans ``assets/figures`` (figures reprises dans le README)."""
+    FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+    fig.savefig(FIGURES_DIR / f"{name}.png", dpi=160, bbox_inches="tight")
 
 
 def cmap(ramp: tuple[str, ...], name: str) -> LinearSegmentedColormap:
