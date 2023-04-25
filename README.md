@@ -108,7 +108,7 @@ exceptionnel.
 |---|---|---|---|
 | `kerala_rainfall_1901_2017.csv` | Pluie mensuelle, saisonnière et annuelle (mm), 1901–2017 | IMD, via [data.gov.in](https://data.gov.in) | Government Open Data License – India |
 | `india_temperatures_1901_2017.csv` | Températures de l'Inde entière (°C), 1901–2017 | IMD, via data.gov.in | Government Open Data License – India |
-| `kerala_floods_2018_districts.csv` | Inondations d'août 2018 par district | Non documentée dans la première version | — |
+| `kerala_floods_2018_districts.csv` | Inondations d'août 2018 par district | Non documentée dans la première version | Non précisée |
 | `imd_kerala_monsoon_2018.csv` | Pluie observée et normale au Kerala, juin–septembre 2018 | [Rapport régional de l'IMD sur la mousson 2018](https://mausam.imd.gov.in/chennai/mcdata/sw_monsoon_2018.pdf) | Chiffres cités avec leur source |
 | `land_use_1914_1967_2007.csv` | Occupation du sol d'un bassin de 483,4 km² | Très probablement Sheeja et al. (2011), bassin de la Neyyar | Extrait d'article |
 | `kerala_districts.geojson` | Contours simplifiés des 14 districts | [DataMeet India](https://github.com/datameet/maps), via [geohacker/kerala](https://github.com/geohacker/kerala) | CC BY 4.0 |
@@ -173,7 +173,7 @@ Le dictionnaire des colonnes et les vérifications faites sur chaque fichier son
 
 ## Auteurs et références
 
-Ilan Aliouchouche, Marwan Khairallah et Youssef Mir — projet IBI (bio-informatique), 2023.
+Ilan Aliouchouche, Marwan Khairallah et Youssef Mir. Projet IBI (bio-informatique), 2023.
 
 - India Meteorological Department, Regional Meteorological Centre Chennai (2019). *Regional report
   on southwest monsoon – 2018 over the southern peninsular India*.

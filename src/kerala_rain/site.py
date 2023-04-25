@@ -258,6 +258,6 @@ def build_site_data() -> dict:
 def write_site_data(path: Path = SITE_DATA_FILE) -> Path:
     """Écrit ``window.SITE_DATA = {...};`` (JSON compact, déterministe)."""
     payload = json.dumps(build_site_data(), ensure_ascii=False, separators=(",", ":"))
-    header = "/* Fichier généré par scripts/build_site_data.py — ne pas modifier à la main. */\n"
+    header = "/* Fichier généré par scripts/build_site_data.py. Ne pas modifier à la main. */\n"
     path.write_text(f"{header}window.SITE_DATA = {payload};\n", encoding="utf-8")
     return path
