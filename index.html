@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Mousson du Kerala</title>
+    <meta
+      name="description"
+      content="De 1901 à 2017, la pluie de mousson du Kerala a reculé d'environ 30 mm par décennie. En août 2018, il en est pourtant tombé le double de la normale. Projet IBI, données de l'IMD."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Le Kerala a perdu un dixième de sa pluie en un siècle" />
+    <meta
+      property="og:description"
+      content="117 ans de mousson au Kerala, les moussons sèches et le déluge d'août 2018 : une analyse des pluies de l'India Meteorological Department (projet IBI)."
+    />
+    <meta property="og:image" content="https://youssefmir.github.io/Precipitations-dans-le-Kerala/cover.png" />
+    <meta property="og:url" content="https://youssefmir.github.io/Precipitations-dans-le-Kerala/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wdth,wght@75..125,400..800&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..600&family=Manjari:wght@400;700&family=Mukta:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="frame.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="topbar">
+      <div class="wrap topbar__inner">
+        <a class="brand" href="#top">Mousson du Kerala <span class="brand__sub">Projet IBI</span></a>
+        <nav class="sitenav" aria-label="Sections">
+          <a href="#mousson">La mousson</a>
+          <a href="#aout-2018">Août 2018</a>
+          <a href="#chaleur">Chaleur</a>
+          <a href="#sols">Sols</a>
+          <a href="#bilan">Bilan</a>
+        </nav>
+        <a class="codelink" href="https://github.com/youssefmir/Precipitations-dans-le-Kerala">Code ↗</a>
+      </div>
+    </header>
+
+    <main id="contenu" class="story">
+      <!-- En-tête : titre, chapô, signature et cadran de la mousson -->
+      <section class="hero wide" aria-labelledby="titre">
+        <div class="hero__text">
+          <h1 id="titre" class="headline">Le Kerala a perdu un dixième de sa pluie en un siècle</h1>
+          <p class="standfirst">
+            Quatre mois de mousson apportent 69&nbsp;% de la pluie de cet État du sud-ouest de l'Inde. De 1901 à
+            2017, le total annuel a reculé d'environ 30&nbsp;mm par décennie. En août&nbsp;2018, il est pourtant
+            tombé près du double de la normale, et les inondations ont fait 339&nbsp;morts.
+          </p>
+          <p class="byline">
+            Par Ilan Aliouchouche, Marwan Khairallah et Youssef Mir<br />
+            Projet IBI (bio-informatique) · avril 2023
+          </p>
+        </div>
+        <figure class="clock" id="fig-clock">
+          <div class="clock__plot" id="clock"></div>
+          <figcaption class="clock__caption">
+            <p>
+              La pluie de chaque mois, de 1901 à 2017. Chaque anneau est une année, du centre vers le bord&nbsp;;
+              plus la case est sombre, plus il a plu. Survolez le cadran pour lire un mois.
+            </p>
+            <div class="ramp" id="clock-ramp" aria-hidden="true"></div>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- La mousson, en quatre temps (défilement) -->
+      <section class="chapter" id="mousson" aria-labelledby="mousson-titre">
+        <div class="text">
+          <h2 id="mousson-titre" class="chapter__title">La mousson fait l'année, et elle faiblit</h2>
+          <p>
+            La mousson du sud-ouest touche la côte du Kerala vers le 1<sup>er</sup>&nbsp;juin et se retire à la fin
+            septembre. Voici ce que 117&nbsp;ans de relevés de l'India Meteorological Department disent de ces
+            quatre mois.
+          </p>
+        </div>
+
+        <div class="scrolly wide" id="scrolly-monsoon">
+          <figure class="scrolly__graphic" id="fig-monsoon">
+            <div class="scrolly__plot" id="monsoon"></div>
+          </figure>
+          <div class="scrolly__steps">
+            <div class="step" data-step="0">
+              <p><strong>Une année en douze mois.</strong> Il tombe en moyenne 2&nbsp;914&nbsp;mm de pluie par an au
+              Kerala, près de quatre fois plus qu'à Paris. Juin et juillet en reçoivent chacun près de 700&nbsp;mm.</p>
+            </div>
+            <div class="step" data-step="1">
+              <p><strong>Quatre mois font l'année.</strong> De juin à septembre, la mousson apporte 69&nbsp;% du total.
+              Les vents du sud-ouest, chargés de l'humidité de la mer d'Arabie, butent sur les Ghats occidentaux
+              et s'y vident.</p>
+            </div>
+            <div class="step" data-step="2">
+              <p><strong>117 moussons, cinq très sèches.</strong> Chaque barre est maintenant une mousson, de 1901 à
+              2017. Cinq sont restées sous 70&nbsp;% de la moyenne (le trait pointillé), en 1918, 1976, 1987, 2002 et
+              2016&nbsp;; quatre d'entre elles après 1975.</p>
+            </div>
+            <div class="step" data-step="3">
+              <p><strong>Une mousson qui faiblit.</strong> Elle perd 25&nbsp;mm par décennie (pente de Sen, test de
+              Mann-Kendall, p&nbsp;=&nbsp;0,013), et l'année entière 29&nbsp;mm, soit 11&nbsp;% depuis 1901. Les écarts
+              d'une année à l'autre, eux, ne se sont pas creusés de façon significative.</p>
+            </div>
+          </div>
+        </div>
+        <p class="source wide" id="source-monsoon">
+          Source&nbsp;: India Meteorological Department, via data.gov.in. Graphique&nbsp;: I.&nbsp;Aliouchouche,
+          M.&nbsp;Khairallah, Y.&nbsp;Mir.
+        </p>
+      </section>
+
+      <!-- Août 2018 : bande sombre pleine largeur -->
+      <section class="band full" id="aout-2018" aria-labelledby="aout-titre">
+        <div class="band__inner">
+          <div class="text">
+            <h2 id="aout-titre" class="chapter__title">En août 2018, la pluie a doublé et les plaines ont payé le plus lourd tribut</h2>
+            <p class="standfirst standfirst--band">
+              Le Kerala reçoit 821,9&nbsp;mm de pluie en août&nbsp;2018, 96&nbsp;% de plus que la normale selon l'IMD.
+              Du 14 au 17&nbsp;août, les quatorze districts subissent des pluies très fortes ou extrêmes, jusqu'à
+              40&nbsp;cm en une journée à Nilambur. Les inondations font 339&nbsp;morts, détruisent 10&nbsp;319&nbsp;maisons
+              et déplacent plus d'un million de personnes.
+            </p>
+          </div>
+
+          <div class="scrolly scrolly--map wide" id="scrolly-flood">
+            <figure class="scrolly__graphic" id="fig-map">
+              <div class="scrolly__plot scrolly__plot--map" id="map"></div>
+            </figure>
+            <div class="scrolly__steps">
+              <div class="step" data-step="0">
+                <p><strong>La pluie.</strong> Treize districts sur quatorze dépassent la normale d'août, jusqu'à
+                +180&nbsp;% dans l'Idukki, sur les pentes des Ghats.</p>
+              </div>
+              <div class="step" data-step="1">
+                <p><strong>Les glissements de terrain.</strong> Ils suivent la pluie et le relief, avec 143 glissements
+                dans l'Idukki et 47 dans le Wayanad. Entre pluie et glissements, la corrélation de rang de Spearman
+                atteint 0,76.</p>
+              </div>
+              <div class="step" data-step="2">
+                <p><strong>Les morts.</strong> Ils dessinent une autre carte. Thrissur, Ernakulam et Alappuzha, plaines
+                inondables et peuplées, sont parmi les plus touchés. Ici, la pluie n'explique presque rien
+                (ρ&nbsp;=&nbsp;0,20). L'exposition des habitants compte davantage.</p>
+              </div>
+            </div>
+          </div>
+          <p class="source wide">
+            Sources&nbsp;: tableau des inondations par district, IMD, contours DataMeet India (CC BY 4.0).
+            Graphique&nbsp;: I.&nbsp;Aliouchouche, M.&nbsp;Khairallah, Y.&nbsp;Mir.
+          </p>
+
+          <div class="text">
+            <h3 class="subhead">Août 2018 n'est que le quatrième mois d'août le plus pluvieux depuis 1901</h3>
+            <p>
+              À l'échelle de l'État, 1931 (1&nbsp;199&nbsp;mm), 1907 et 1923 ont reçu davantage. L'épisode de 2018 tient
+              à sa concentration, quatre jours de pluies extrêmes sur des sols vraisemblablement saturés par un juin
+              et un juillet déjà excédentaires (+15&nbsp;% et +18&nbsp;%). Le précédent reste juillet 1924, la «&nbsp;grande
+              crue de 99&nbsp;» du calendrier malayalam, avec 1&nbsp;526&nbsp;mm.
+            </p>
+          </div>
+          <figure class="wide graphic" id="fig-august">
+            <div class="graphic__plot" id="august"></div>
+            <figcaption class="source">
+              Pluie du mois d'août sur l'ensemble de l'État, en mm. 2018&nbsp;: chiffre du rapport régional de l'IMD
+              sur la mousson 2018. Graphique&nbsp;: I.&nbsp;Aliouchouche, M.&nbsp;Khairallah, Y.&nbsp;Mir.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Températures : bandes de réchauffement pleine largeur -->
+      <section class="chapter" id="chaleur" aria-labelledby="chaleur-titre">
+        <div class="text">
+          <h2 id="chaleur-titre" class="chapter__title">L'Inde s'est réchauffée de 1,2&nbsp;°C par siècle</h2>
+          <p>
+            Faute de série centenaire pour le Kerala, nous utilisons les températures de l'Inde entière,
+            vraisemblablement des maximales journalières. Toutes les saisons se réchauffent, de 0,8&nbsp;°C par siècle
+            pendant la mousson à 1,6&nbsp;°C en janvier et février (pente de Sen, p&nbsp;&lt;&nbsp;0,001). 2016 et 2017
+            sont les deux années les plus chaudes de la série.
+          </p>
+        </div>
+        <figure class="full stripes" id="fig-stripes">
+          <div class="stripes__plot" id="stripes"></div>
+        </figure>
+        <p class="source wide">
+          Chaque bande est une année, colorée selon son écart à la moyenne 1901–2017. Source&nbsp;: India
+          Meteorological Department, via data.gov.in. Graphique&nbsp;: I.&nbsp;Aliouchouche, M.&nbsp;Khairallah,
+          Y.&nbsp;Mir.
+        </p>
+        <div class="text">
+          <p>
+            Ces deux séries ne suffisent pas à relier ce réchauffement à la baisse des pluies du Kerala&nbsp;; c'est
+            le GIEC qui établit ce lien, à plus grande échelle.
+          </p>
+        </div>
+      </section>
+
+      <!-- Occupation du sol : 483 carrés d'un kilomètre carré -->
+      <section class="chapter" id="sols" aria-labelledby="sols-titre">
+        <div class="text">
+          <h2 id="sols-titre" class="chapter__title">Dans le bassin de la Neyyar, l'hévéa a remplacé les rizières</h2>
+          <p>
+            Ce bassin du sud du Kerala couvre 483&nbsp;km²&nbsp;; chaque carré ci-dessous en représente un. Entre 1914 et
+            2007, les rizières passent de 41 à 12&nbsp;km², l'hévéa de 0 à 58&nbsp;km² et les zones bâties de 2 à
+            10&nbsp;km². Une rizière inondée retient l'eau comme une éponge. Sa disparition, comme la construction
+            en zone inondable ou les carrières sur les pentes, est citée parmi les causes humaines qui ont aggravé
+            les crues de 2018.
+          </p>
+        </div>
+        <figure class="wide graphic" id="fig-landuse">
+          <div class="years" role="group" aria-label="Année affichée" id="landuse-years"></div>
+          <div class="waffle" id="landuse"></div>
+          <figcaption class="source">
+            Source probable&nbsp;: Sheeja et al. (2011), d'après des cartes topographiques de 1914 et 1967 et des
+            images satellite de 2006–2007. Graphique&nbsp;: I.&nbsp;Aliouchouche, M.&nbsp;Khairallah, Y.&nbsp;Mir.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Bilan, en prose -->
+      <section class="chapter" id="bilan" aria-labelledby="bilan-titre">
+        <div class="text">
+          <h2 id="bilan-titre" class="chapter__title">Une mousson moins abondante, des dégâts qui dépendent des territoires</h2>
+          <p>
+            Ces données établissent une baisse de la pluie de mousson au Kerala depuis 1901, des moussons
+            déficitaires plus fréquentes depuis les années 1960 (onze sur quatorze) et un réchauffement net de
+            l'Inde. Elles montrent aussi qu'en 2018, la carte des morts ne suivait pas celle de la pluie.
+          </p>
+          <p>
+            Deux idées de départ ne résistent pas aux tests. La variabilité d'une année à l'autre n'a pas augmenté
+            de façon significative (test de Brown-Forsythe, p&nbsp;=&nbsp;0,40 pour la mousson), et la saison des pluies
+            ne s'est pas décalée vers l'automne (test de Mann-Whitney, p&nbsp;≥&nbsp;0,11).
+          </p>
+          <p>
+            Trois limites demeurent. Les températures concernent l'Inde entière, le tableau des inondations ne cite
+            pas sa source (nous avons vérifié qu'il couvre bien août&nbsp;2018), et l'occupation du sol ne décrit qu'un
+            bassin versant.
+          </p>
+
+          <details class="more" id="details">
+            <summary>Détails&nbsp;: variabilité, répartition des mois, saisons et méthode</summary>
+            <div class="more__body">
+              <figure class="graphic" id="fig-cv">
+                <p class="graphic__title">Variabilité d'une année à l'autre, sur des fenêtres de 30&nbsp;ans</p>
+                <div class="graphic__plot" id="cv"></div>
+                <figcaption class="source">Coefficient de variation (écart-type divisé par la moyenne).</figcaption>
+              </figure>
+              <figure class="graphic" id="fig-shares">
+                <p class="graphic__title">Part de chaque mois dans la pluie de l'année, 1901–1930 et 1988–2017</p>
+                <div class="graphic__plot" id="shares"></div>
+                <figcaption class="source">p&nbsp;: test de Mann-Whitney entre les deux périodes.</figcaption>
+              </figure>
+              <figure class="graphic" id="fig-seasons">
+                <p class="graphic__title">Réchauffement de l'Inde par saison, en °C par siècle</p>
+                <div class="graphic__plot" id="seasons"></div>
+                <figcaption class="source">Pente de Sen et intervalle de confiance à 95&nbsp;%.</figcaption>
+              </figure>
+              <p>
+                Les tendances sont estimées par la pente de Sen (médiane des pentes entre toutes les paires
+                d'années) et testées par le test de Mann-Kendall, avec plusieurs contrôles&nbsp;: moindres carrés,
+                bootstrap, correction de l'autocorrélation et retrait des années extrêmes. Le détail est dans le
+                <a href="https://github.com/youssefmir/Precipitations-dans-le-Kerala/blob/main/notebooks/kerala_monsoon.ipynb">notebook d'analyse</a>.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer__grid">
+        <div>
+          <h2>Données</h2>
+          <ul>
+            <li>Pluie et températures&nbsp;: India Meteorological Department, via <a href="https://data.gov.in">data.gov.in</a> (Government Open Data License, India)</li>
+            <li>Mousson 2018&nbsp;: IMD, <a href="https://mausam.imd.gov.in/chennai/mcdata/sw_monsoon_2018.pdf">rapport régional sur la mousson 2018</a></li>
+            <li>Districts&nbsp;: <a href="https://github.com/datameet/maps">DataMeet India</a> (CC BY 4.0)</li>
+            <li>Occupation du sol&nbsp;: Sheeja et al. (2011)</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Méthode</h2>
+          <ul>
+            <li><a href="https://github.com/youssefmir/Precipitations-dans-le-Kerala/blob/main/notebooks/kerala_monsoon.ipynb">Notebook d'analyse</a></li>
+            <li>Tendances&nbsp;: pente de Sen et test de Mann-Kendall</li>
+            <li>Variabilité&nbsp;: test de Brown-Forsythe&nbsp;; saisons&nbsp;: test de Mann-Whitney</li>
+            <li>Inondations&nbsp;: corrélation de rang de Spearman</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Projet</h2>
+          <ul>
+            <li>Projet IBI (bio-informatique), 2023</li>
+            <li>Ilan Aliouchouche, Marwan Khairallah, Youssef Mir</li>
+            <li><a href="https://github.com/youssefmir/Precipitations-dans-le-Kerala">Code source sur GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="frame.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
