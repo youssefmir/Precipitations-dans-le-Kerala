@@ -4,7 +4,7 @@ De 1901 à 2017, la pluie annuelle du Kerala a baissé d'environ 30 mm par déce
 117 ans), portée par la mousson qui en apporte 69 % ; en août 2018, l'État a pourtant reçu près
 du double de la normale.
 
-[![Cadran de la mousson : la pluie de chaque mois au Kerala de 1901 à 2017, à côté des chiffres clés du projet](assets/cover.png)](https://youssefmir.github.io/Precipitations-dans-le-Kerala/)
+[![Titre « Le Kerala a perdu un dixième de sa pluie en un siècle » à côté du cadran de la mousson, qui montre la pluie de chaque mois de 1901 à 2017](assets/cover.png)](https://youssefmir.github.io/Precipitations-dans-le-Kerala/)
 
 **[Voir le site interactif](https://youssefmir.github.io/Precipitations-dans-le-Kerala/)** · [Lire le notebook](https://github.com/youssefmir/Precipitations-dans-le-Kerala/blob/main/notebooks/kerala_monsoon.ipynb) · [Données](#données)
 
