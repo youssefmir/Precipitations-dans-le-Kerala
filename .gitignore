@@ -17,3 +17,4 @@ venv/
 # Systèmes
 .DS_Store
 Thumbs.db
+.vercel/

@@ -1,0 +1,10 @@
+assets/
+data/
+notebooks/
+references/
+scripts/
+src/
+tests/
+requirements*.txt
+pyproject.toml
+README.md
