@@ -4,9 +4,9 @@ De 1901 à 2017, la pluie annuelle du Kerala a baissé d'environ 30 mm par déce
 117 ans), portée par la mousson qui en apporte 69 % ; en août 2018, l'État a pourtant reçu près
 du double de la normale.
 
-[![Titre « Le Kerala a perdu un dixième de sa pluie en un siècle » à côté du cadran de la mousson, qui montre la pluie de chaque mois de 1901 à 2017](assets/cover.png)](https://youssefmir.github.io/Precipitations-dans-le-Kerala/)
+[![Titre « Le Kerala a perdu un dixième de sa pluie en un siècle » à côté du cadran de la mousson, qui montre la pluie de chaque mois de 1901 à 2017](assets/cover.png)](https://precipitations-kerala.vercel.app/)
 
-**[Voir le site interactif](https://youssefmir.github.io/Precipitations-dans-le-Kerala/)** · [Lire le notebook](https://github.com/youssefmir/Precipitations-dans-le-Kerala/blob/main/notebooks/kerala_monsoon.ipynb) · [Données](#données)
+**[Voir le site interactif](https://precipitations-kerala.vercel.app/)** · [Lire le notebook](https://github.com/youssefmir/Precipitations-dans-le-Kerala/blob/main/notebooks/kerala_monsoon.ipynb) · [Données](#données)
 
 ## En bref
 
@@ -45,6 +45,12 @@ jupyter notebook notebooks/kerala_monsoon.ipynb
 
 Le notebook s'exécute en une dizaine de secondes. Toutes les données sont dans le dépôt : aucune
 clé ni aucun téléchargement n'est nécessaire.
+
+## Déploiement
+
+Le site est hébergé sur [Vercel](https://precipitations-kerala.vercel.app/). Chaque push sur
+`main` déclenche sa publication automatique. La configuration `vercel.json` sert directement
+le dossier `docs/`, sans compilation ni installation Python.
 
 ## Utilisation
 
@@ -134,7 +140,7 @@ Le dictionnaire des colonnes et les vérifications faites sur chaque fichier son
 ├── scripts/
 │   ├── build_site_data.py       régénère docs/data.js
 │   └── prepare_districts.py     télécharge et simplifie les contours des districts
-├── docs/                        site interactif (GitHub Pages)
+├── docs/                        site interactif (Vercel)
 ├── tests/                       tests pytest
 ├── assets/                      visuel de couverture, figures du README, photos
 ├── references/                  article cité sur les températures à Kottayam
